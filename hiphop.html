@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Focus View</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="script.js"></script>
+    <link rel="icon" type="image/x-icon" href="/Resources/favicon.ico">
+  </head>
+  <body>
+    <div class="card-container">
+      <main class="main-content">
+        <h1><a href="https://www.youtube.com/watch?v=s4cqzF6tMBQ&pp=ygUPYXJjYW5lIHNlYXNvbiAy">Hidden Meanings Behind Kendrick Lamar's "Not Like Us" Music Video Explained</a></h1>
+        <hr style="margin: 8px;"/>
+        <h3 style="text-align: center;">Description<h3>
+        <p>
+            Breaking down all the references in Kendrick Lamar's long awaited music video for "Not Like Us", a video that seems like the last chapter of the beef between him and<span id="dots">...</span><span id="more"><span> </span>Drake. Lamar released the video on Independence Day, and previously held a concert called "The Pop Out" on Juneteenth, where he performed "Not Like Us" six times. The video had received over 13 million views as of Friday morning.</span>
+        </p>
+        <button onclick="readMore()" id="readmore" style="cursor: pointer;">Read more</button>
+      </main>
+    </div>
+    <div class="container">
+        <iframe src="https://www.youtube.com/embed/Ibm77a8Am_8?si=K5CXuWmL_NR3qOg1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+    <select id="navigationDropdown" style="position: relative;left: 60px;bottom:320px; cursor: pointer;" onchange="handleDropdownChange()">
+        <option value="index.html">Entertainment</option>
+        <option value="hiphop.html">Hip Hop</option>
+        <option value="gaming.html">Gaming</option>
+        <option value="sports.html">Sports</option>
+        <option value="education.html">Education</option>
+    </select>
+    <button id="toggle-autoplay" style="position: relative;left: 690px;bottom:320px; cursor: pointer;">Toggle Autoplay</button>
+  </body>
+</html>

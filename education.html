@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Focus View</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="script.js"></script>
+    <link rel="icon" type="image/x-icon" href="/Resources/favicon.ico">
+  </head>
+  <body>
+    <div class="card-container">
+      <main class="main-content">
+        <h1><a href="https://www.youtube.com/watch?v=LxyyvW_fcqw">Why Fentanyl Is So Incredibly Dangerous</a></h1>
+        <hr style="margin: 8px;"/>
+        <h3 style="text-align: center;">Description<h3>
+        <p>
+            In this video, Justin from the Institute of Human Anatomy discusses what opioids, and more specifically fentanyl does to the body. Resources for<span id="dots">...</span><span id="more"><span> </span> help:<br><br>
+            SAMSHA National Helpline<Br>
+            1-800-662-4357<br>
+            <a href="https://www.samhsa.gov/find-help/national-helpline">https://www.samhsa.gov/find-help/national-helpline</a><br><br>
+            
+            CDC
+            <a href="https://www.cdc.gov/overdose-prevention/treatment/opioid-addiction.html?CDC_AAref_Val=https://www.cdc.gov/drugoverdose/featured-topics/treatment-recovery.html">https://www.cdc.gov/overdose-prevention/treatment/opioid-addiction.html?CDC_AAref_Val=https://www.cdc.gov/drugoverdose/featured-topics/treatment-recovery.html</a><br><br>
+            
+            U.S. Department of Health and Human Services
+            <a href="https://www.hhs.gov/opioids/treatment/index.html">https://www.hhs.gov/opioids/treatment/index.html</a></span>
+        </p>
+        <button onclick="readMore()" id="readmore" style="cursor: pointer;">Read more</button>
+      </main>
+    </div>
+    <div class="container">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/LxyyvW_fcqw?si=7yPyvavXtrP08g1t" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+    <select id="navigationDropdown" style="position: relative;left: 60px;bottom:320px; cursor: pointer;" onchange="handleDropdownChange()">
+        <option value="index.html">Entertainment</option>
+        <option value="hiphop.html">Hip Hop</option>
+        <option value="gaming.html">Gaming</option>
+        <option value="sports.html">Sports</option>
+        <option value="education.html">Education</option>
+    </select>
+    <button id="toggle-autoplay" style="position: relative;left: 690px;bottom:320px; cursor: pointer;">Toggle Autoplay</button>
+  </body>
+</html>

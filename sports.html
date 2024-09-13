@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Focus View</title>
+    <link rel="stylesheet" href="./style.css">
+    <script type="text/javascript" src="script.js"></script>
+    <link rel="icon" type="image/x-icon" href="/Resources/favicon.ico">
+  </head>
+  <body>
+    <div class="card-container">
+      <main class="main-content">
+        <h1><a href="https://www.youtube.com/watch?v=ZwQqkuUS1Nk&pp=ygUGc3BvcnRz">Funniest Moments in Sports...</a></h1>
+        <hr style="margin: 8px;"/>
+        <h3 style="text-align: center;">Description<h3>
+        <p>
+            These are the most funny moments in sports caught on camera! From football fails to unlucky athletes. Try not to laugh at these funny moments in sports. For<span id="dots">...</span><span id="more"><span> </span>copyright matters, please contact: infotrendcentral@gmail.com</span>
+        </p>
+        <button onclick="readMore()" id="readmore" style="cursor: pointer;">Read more</button>
+      </main>
+    </div>
+    <div class="container">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/ZwQqkuUS1Nk?si=3Lgn0Z8VYQrE-zvk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+    <select id="navigationDropdown" style="position: relative;left: 60px;bottom:320px; cursor: pointer;" onchange="handleDropdownChange()">
+        <option value="index.html">Entertainment</option>
+        <option value="hiphop.html">Hip Hop</option>
+        <option value="gaming.html">Gaming</option>
+        <option value="sports.html">Sports</option>
+        <option value="education.html">Education</option>
+    </select>
+    <button id="toggle-autoplay" style="position: relative;left: 690px;bottom:320px; cursor: pointer;">Toggle Autoplay</button>
+  </body>
+</html>

@@ -1,0 +1,122 @@
+/* Importing a font for use, I liked it :D */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+:root {
+    
+    font-size: 15px;
+    /* Primary Colors */
+    --var-soft-blue: hsl(215, 51%, 70%);
+    --var-cyan: hsl(178, 100%, 50%);
+    /* Neutral Colors */
+    --var-main-darkest: hsl(217, 54%, 11%);
+    --var-card-dark: hsl(216, 48%, 19%);
+    --var-line-dark: hsl(215, 32%, 27%);
+    --var-lightest: white;
+    /* Fonts */
+    --var-heading: normal normal 600 1.5em/1.6em 'Outfit', sans-serif;
+    --var-small-heading: normal normal 400 1em/1em 'Outfit', sans-serif;
+    --var-para: normal normal 300 1em/1.55em 'Outfit', sans-serif;
+}
+
+html,body {
+    height:100%;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    background-color: var(--var-main-darkest);
+}
+
+a {
+    color: inherit;
+}
+
+h1 {
+    font: var(--var-heading);
+    color: var(--var-lightest);
+    font-size: 24px;
+}
+
+h2 {
+    font: var(--var-small-heading);
+    color: var(--var-lightest);
+}
+
+h3 {
+    font: var(--var-heading);
+    color: var(--var-lightest);
+    padding: .1em 0;
+    font-size: 19px;
+}
+
+p {
+    font: var(--var-para);
+    color: var(--var-soft-blue);
+    font-size: 16px;
+}
+
+button{
+    background-color: var(--var-line-dark); /* Green */
+    border: none;
+    color: rgb(18, 188, 215);
+    padding: 8px 15px;
+    text-align: center;
+    font: var(--var-para);
+    display: inline-block;
+    font-size: 16px;
+}
+
+.card-container {
+    width: 410%;
+    max-width: 420px;
+    margin-left: 45px;
+    margin-top: 97px;
+    background-color: var(--var-card-dark);
+    border-radius: 15px;
+    margin-bottom: 1rem;
+    padding: 2rem;
+}
+
+.container {
+    position: relative; /* Position relative to the viewport */
+    left: 300px; /* Adjust the horizontal position */
+    bottom: 340px; /* Adjust the vertical position */
+    display: flex; /* Use flex layout to position items inside */
+    align-items: center;
+    justify-content: center;
+    z-index: 1000; /* Ensure it’s on top */
+    box-sizing: border-box; /* Ensures padding and border are included */
+}
+
+.container > * {
+    /* Remove margin if not needed */
+    margin: 0;
+    /* Ensure no unwanted transform is applied */
+    transform: none;
+}
+
+iframe {
+    width: 590px; /* Set the desired width */
+    height: 405px; /* Set the desired height */
+    border: none; /* Optional: removes the border */
+}
+
+#navigationDropdown{
+    background-color: var(--var-line-dark); /* Green */
+    border: none;
+    color: rgb(18, 188, 215);
+    padding: 8px 15px;
+    text-align: center;
+    font: var(--var-para);
+    display: inline-block;
+    font-size: 16px;
+}
+
+#more {display: none;}

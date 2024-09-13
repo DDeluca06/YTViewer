@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Focus View</title>
+    <link rel="stylesheet" href="./style.css">
+    <script type="text/javascript" src="script.js"></script>
+    <link rel="icon" type="image/x-icon" href="/Resources/favicon.ico">
+  </head>
+  <body>
+    <div class="card-container">
+      <main class="main-content">
+        <h1><a href="https://www.youtube.com/watch?v=s4cqzF6tMBQ&pp=ygUPYXJjYW5lIHNlYXNvbiAy">Arcane: Season 2 | Official Trailer</a></h1>
+        <hr style="margin: 8px;"/>
+        <h3 style="text-align: center;">Description<h3>
+        <p>
+            Watch it all burn.<br>
+            The award-winning series returns for the final chapter, this November only on Netflix.<br><br>
+            <!-- Yeah, I used an empty span to create a space. This is going to annoy me forever. -->
+            Watch on<span id="dots">...</span><span id="more"><span> </span><a href="https://www.netflix.com/title/81516572">Netflix</a>.<br>
+            Subscribe: <a href="https://bit.ly/33okaL0">https://bit.ly/33okaL0</a><br>
+            About Netflix:<br><br>
+            Netflix is one of the world's leading entertainment services, with 278 million paid memberships in over 190 countries enjoying TV series, films and games across a wide variety of genres and languages. Members can play, pause and resume watching as much as they want, anytime, anywhere, and can change their plans at any time.</span>
+        </p>
+        <button onclick="readMore()" id="readmore" style="cursor: pointer;">Read more</button>
+      </main>
+    </div>
+    <div class="container">
+        <iframe id="youtube-video" src="https://www.youtube.com/embed/s4cqzF6tMBQ?si=DCqlLwoKev5HqRHO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+    <select id="navigationDropdown" style="position: relative;left: 60px;bottom:320px; cursor: pointer;" onchange="handleDropdownChange()">
+        <option value="index.html">Entertainment</option>
+        <option value="hiphop.html">Hip Hop</option>
+        <option value="gaming.html">Gaming</option>
+        <option value="sports.html">Sports</option>
+        <option value="education.html">Education</option>
+    </select>
+    <button id="toggle-autoplay" style="position: relative;left: 690px;bottom:320px; cursor: pointer;">Toggle Autoplay</button>
+  </body>
+</html>
