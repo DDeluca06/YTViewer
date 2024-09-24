@@ -18,13 +18,6 @@
     --var-para: normal normal 300 1em/1.55em 'Outfit', sans-serif;
 }
 
-html,body {
-    height:100%;
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
 *, *::before, *::after {
     box-sizing: border-box;
     margin: 0;
@@ -85,7 +78,7 @@ button{
 }
 
 .container {
-    position: relative; /* Position relative to the viewport */
+    position: fixed; /* Position relative to the viewport */
     left: 300px; /* Adjust the horizontal position */
     bottom: 340px; /* Adjust the vertical position */
     display: flex; /* Use flex layout to position items inside */
@@ -103,9 +96,11 @@ button{
 }
 
 iframe {
-    width: 590px; /* Set the desired width */
-    height: 405px; /* Set the desired height */
-    border: none; /* Optional: removes the border */
+    width: 34vw; /* Set the desired width */
+    height: 46vh; /* Set the desired height */
+    position: fixed;
+    left: 49%;
+    top: 15%;
 }
 
 #navigationDropdown{
