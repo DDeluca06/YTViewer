@@ -16,21 +16,20 @@
         <hr style="margin: 8px;"/>
         <h3 style="text-align: center;">Description<h3>
         <p>
-            Breaking down all the references in Kendrick Lamar's long awaited music video for "Not Like Us", a video that seems like the last chapter of the beef between him and<span id="dots">...</span><span id="more"><span> </span>Drake. Lamar released the video on Independence Day, and previously held a concert called "The Pop Out" on Juneteenth, where he performed "Not Like Us" six times. The video had received over 13 million views as of Friday morning.</span>
+            Breaking down all the references in Kendrick Lamar's long awaited music video for "Not Like Us", a video that seems like<span id="dots">...</span><span id="more"><span> </span>the last chapter of the beef between him and Drake. Lamar released the video on Independence Day, and previously held a concert called "The Pop Out" on Juneteenth, where he performed "Not Like Us" six times. The video had received over 13 million views as of Friday morning.</span>
         </p>
         <button onclick="readMore()" id="readmore" style="cursor: pointer;">Read more</button>
       </main>
     </div>
     <div class="container">
         <iframe src="https://www.youtube.com/embed/Ibm77a8Am_8?si=K5CXuWmL_NR3qOg1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    </div>
-    <select id="navigationDropdown" style="position:sticky;left: 8%; cursor: pointer; float: left;" onchange="handleDropdownChange()">
-        <option value="index.html">Entertainment</option>
-        <option value="hiphop.html">Hip Hop</option>
-        <option value="gaming.html">Gaming</option>
-        <option value="sports.html">Sports</option>
-        <option value="education.html">Education</option>
-    </select>
-    <button id="toggle-autoplay" style="position:fixed;left: 50%;bottom:32%; cursor: pointer;">Toggle Autoplay</button>
+        <select id="navigationDropdown" class="changer" onchange="handleDropdownChange()">
+          <option value="index.html">Entertainment</option>
+          <option value="hiphop.html">Hip Hop</option>
+          <option value="gaming.html">Gaming</option>
+          <option value="sports.html">Sports</option>
+          <option value="education.html">Education</option>
+      </select>
+    <button id="toggle-autoplay" class="autoplayer">Toggle Autoplay</button>
   </body>
 </html>

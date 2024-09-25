@@ -103,6 +103,21 @@ iframe {
     top: 15%;
 }
 
+.changer{
+    position: sticky;
+    right: 80%;
+    cursor: pointer;
+    float: right;
+    margin-bottom: 6%;
+}
+
+.autoplayer{
+    position: fixed;
+    left: 51%;
+    bottom:30%;
+    cursor: pointer
+}
+
 #navigationDropdown{
     background-color: var(--var-line-dark); /* Green */
     border: none;
