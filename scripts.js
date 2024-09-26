@@ -11,7 +11,7 @@ const contentData = {
     },
     gaming: {
         title: "Arcane: Season 2 | Official Trailer",
-        description: "Watch it all burn.\nThe award-winning series returns for the final chapter, this November only on Netflix.<span id='dots'>...</span><span id='more'><br> Watch on Netflix.<br>Subscribe: https://bit.ly/33okaL0 <br><br> About Netflix:<br><br>Netflix is one of the world's leading entertainment services, with 278 million paid memberships in over 190 countries enjoying TV series, films and games across a wide variety of genres and languages. Members can play, pause and resume watching as much as they want, anytime, anywhere, and can change their plans at any time.</span>",
+        description: "Watch it all burn.<br>The award-winning series returns for the final chapter, this November only on Netflix.<span id='dots'>...</span><span id='more'><br> Watch on Netflix.<br>Subscribe: https://bit.ly/33okaL0 <br><br> About Netflix:<br><br>Netflix is one of the world's leading entertainment services, with 278 million paid memberships in over 190 countries enjoying TV series, films and games across a wide variety of genres and languages. Members can play, pause and resume watching as much as they want, anytime, anywhere, and can change their plans at any time.</span>",
         videoUrl: "https://www.youtube.com/embed/s4cqzF6tMBQ?si=DCqlLwoKev5HqRHO"
     },
     sports: {

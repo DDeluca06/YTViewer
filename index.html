@@ -1,46 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Focus View</title>
-    <link rel="stylesheet" href="./style.css">
-    <script type="text/javascript" src="script.js"></script>
     <link rel="icon" type="image/x-icon" href="/Resources/favicon.ico">
-  </head>
-  <body>
-    <div class="card-container">
-      <main class="main-content">
-        <!-- Sure. Why not. Who cares? -->
-        <h1><a href="https://www.youtube.com/watch?v=ulQwxmDig8Y">PlayStation's Insane Week in a Nutshell</a></h1>
-        <hr style="margin: 8px;"/>
-        <h3 style="text-align: center;">Description<h3>
-        <p>
-            HOW DID THIS ALL HAPPEN SO CLOSE TOGETHER?!<span id="dots">...</span><span id="more"><span> </span><br><br>
-            🔔 Subscribble for more viddles! ►    / @circletoonshd  <br><br>
-            
-            🔔 Check out my other channel!  ►    / @circletoonslive  <br><br>
-            
-            🃏 My Card Game!!!! ► <a href="www.foolsblade.com">www.foolsblade.com</a><br>
-            👕 Merch! ► https://circletoonshd.com/<br>
-            💜 Twitch! ►   / circletoonshd<br>
-            📸 Instagram! ►   / circletoonsig<br>
-            🐤 Twitter! ►   / circletoonshd<br></span>
-        </p>
-        <button onclick="readMore()" id="readmore" style="cursor: pointer;">Read more</button>
-      </main>
+    <link rel="stylesheet" href="./styles.css">
+    <script type="text/javascript" src="scripts.js"></script>
+</head>
+<body>
+    <section class="layout">
+        <main class="main-content card-container">
+        <!-- <section class="card-container"> -->
+                <h1 id="title"></h1>
+                <hr style="margin: 8px;"/>
+                <h3 style="text-align: center;">Description</h3>
+                <p id="description"></p>
+                <button onclick="readMore()" id="readmore" style="cursor: pointer;">Read more</button>
+            </main>
+        <!-- </section> -->
+        <section class="video-container">
+            <iframe id="youtube-video" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </section>
+    </section>
+    <div class="controls">
+        <select id="navigationDropdown" onchange="handleDropdownChange()">
+            <option value="entertainment">Entertainment</option>
+            <option value="hiphop">HipHop</option>
+            <option value="gaming">Gaming</option>
+            <option value="sports">Sports</option>
+            <option value="education">Education</option>
+        </select>
+        <button id="toggle-autoplay">Toggle Autoplay</button>
     </div>
-    <div class="container">
-        <iframe src="https://www.youtube.com/embed/ulQwxmDig8Y?si=oi09Iv3N7fXUmZHS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <h1>What's Happening Now</h1>
+    <div class="favored">
+        <a href="https://www.youtube.com/watch?v=5FrhtahQiRc" target="_blank"><img src="https://i3.ytimg.com/vi/5FrhtahQiRc/maxresdefault.jpg"></a>
+        <a href="https://www.youtube.com/watch?v=Q8D95ErQbjk" target="_blank"><img src="https://i3.ytimg.com/vi/Q8D95ErQbjk/maxresdefault.jpg"></a>
+        <a href="https://www.youtube.com/watch?v=UGj8rcxYrpU" target="_blank"><img src="https://i3.ytimg.com/vi/UGj8rcxYrpU/maxresdefault.jpg"></a>
+        <a href="https://www.youtube.com/watch?v=WXFW1LL_Q7k" target="_blank"><img src="https://i3.ytimg.com/vi/WXFW1LL_Q7k/maxresdefault.jpg"></a>
+        <a href="https://www.youtube.com/watch?v=DfiF8Guf1bA" target="_blank"><img src="https://i3.ytimg.com/vi/DfiF8Guf1bA/maxresdefault.jpg"></a>
     </div>
-    <select id="navigationDropdown" class="changer" onchange="handleDropdownChange()">
-        <option value="index.html">Entertainment</option>
-        <option value="hiphop.html">HipHop</option>
-        <option value="gaming.html">Gaming</option>
-        <option value="sports.html">Sports</option>
-        <option value="education.html">Education</option>
-    </select>
-    <button id="toggle-autoplay" class="autoplayer">Toggle Autoplay</button>
-  </body>
+</body>
 </html>

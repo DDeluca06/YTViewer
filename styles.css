@@ -1,3 +1,8 @@
+.layout{
+    display: grid;
+    grid-template-columns: 2 2fr;
+    grid-template-rows: 2 2fr;
+}
 /* Importing a font for use, I liked it :D */
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
 
@@ -8,8 +13,8 @@
     --var-soft-blue: hsl(215, 51%, 70%);
     --var-cyan: hsl(178, 100%, 50%);
     /* Neutral Colors */
-    --var-main-darkest: hsl(217, 54%, 11%);
-    --var-card-dark: hsl(216, 48%, 19%);
+    --var-main-darkest: hsl(217, 75%, 11%);
+    --var-card-dark: hsl(216, 61%, 22%);
     --var-line-dark: hsl(215, 32%, 27%);
     --var-lightest: white;
     /* Fonts */
@@ -21,6 +26,8 @@
 *, *::before, *::after {
     box-sizing: border-box;
     margin: 0;
+    grid-template-columns: 2, 1fr;
+    grid-template-rows: 2, 1fr;
 }
 
 body {
@@ -55,7 +62,7 @@ p {
     font-size: 16px;
 }
 
-button{
+button, select {
     background-color: var(--var-line-dark); /* Green */
     border: none;
     color: rgb(18, 188, 215);
@@ -65,7 +72,8 @@ button{
     display: inline-block;
     font-size: 16px;
 }
-#navigationDropdown {
+
+/* #navigationDropdown {
     background-color: var(--var-line-dark);
     border: none;
     color: rgb(18, 188, 215);
@@ -74,30 +82,34 @@ button{
     font: var(--var-para);
     display: inline-block;
     font-size: 16px;
-    margin-bottom: 20px; /* Add some space between dropdown and autoplay button */
-}
+    margin-bottom: 20px; /* Add some space between dropdown and autoplay button
+ } */
 
 .card-container {
+    position:sticky;
     width: 410%;
     max-width: 420px;
-    margin-left: 45px;
+    right: 85%;
     margin-top: 97px;
     background-color: var(--var-card-dark);
     border-radius: 15px;
     margin-bottom: 1rem;
     padding: 2rem;
+    grid-column: 1 / 1;
+    grid-row: 1;
+    left: 30px;
 }
 
-.container {
-    position: fixed; /* Position relative to the viewport */
-    left: 300px; /* Adjust the horizontal position */
-    bottom: 340px; /* Adjust the vertical position */
-    display: flex; /* Use flex layout to position items inside */
+/*.container {
+    position: fixed;
+    left: 300px;
+    bottom: 340px; 
+    display: flex; 
     align-items: center;
     justify-content: center;
-    z-index: 1000; /* Ensure it’s on top */
-    box-sizing: border-box; /* Ensures padding and border are included */
-}
+    z-index: 1000; 
+    box-sizing: border-box; 
+}*/
 
 .container > * {
     /* Remove margin if not needed */
@@ -106,31 +118,55 @@ button{
     transform: none;
 }
 
-iframe {
-    width: 34vw; /* Set the desired width */
-    height: 46vh; /* Set the desired height */
-    position: fixed;
-    left: 49%;
-    top: 15%;
-}
 
-.autoplayer{
+/* .autoplayer{
     position: fixed;
     left: 51%;
     bottom:30%;
     cursor: pointer
+} */
+
+/* body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+} */
+
+.video-container {
+    /* position: fixed; */
+    /* left: 30px; */
+    /* max-width: 560px; */
+    /* margin-bottom: 20px; */
+    /* grid-template-columns: repeat(2 1fr); */
+    grid-column: 2 / 2;
+    grid-row: 1; 
 }
 
-#navigationDropdown{
-    background-color: var(--var-line-dark); /* Green */
-    border: none;
-    color: rgb(18, 188, 215);
-    padding: 8px 15px;
-    text-align: center;
-    font: var(--var-para);
-    display: inline-block;
-    font-size: 16px;
-    right: 6%;
+iframe {
+    /* position: fixed; */
+    width: 83%;
+    height: 73%;
+    right: 12%;
+    margin-top: 80px;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    left: 30px;
+}
+
+button, #navigationDropdown {
+    margin: 0;
+    cursor: pointer;
+}
+
+.favored img {
+    width: 19vw;
+    padding: 3px;
 }
 
 #more {display: none;}
