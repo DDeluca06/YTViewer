@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="datatheme">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,9 +7,8 @@
     <title>Focus View</title>
     <link rel="icon" type="image/x-icon" href="/Resources/favicon.ico">
     <link rel="stylesheet" href="./styles.css">
-    <script type="text/javascript" src="scripts.js"></script>
 </head>
-<body>
+<body data-theme="dark" id="body">
     <section class="layout">
         <main class="main-content card-container">
         <!-- <section class="card-container"> -->
@@ -33,6 +32,12 @@
             <option value="education">Education</option>
         </select>
         <button id="toggle-autoplay">Toggle Autoplay</button>
+        <select id="theme-selector">
+            <option value="dark">Dark Mode</option>
+            <option value="light">Light Mode</option>
+            <option value="sepia">Sepia Mode</option>
+            <option value="blue-light">Blue Light Filter</option>
+        </select>
     </div>
     <h1>What's Happening Now</h1>
     <div class="favored">
@@ -42,5 +47,6 @@
         <a href="https://www.youtube.com/watch?v=WXFW1LL_Q7k" target="_blank"><img src="https://i3.ytimg.com/vi/WXFW1LL_Q7k/maxresdefault.jpg"></a>
         <a href="https://www.youtube.com/watch?v=DfiF8Guf1bA" target="_blank"><img src="https://i3.ytimg.com/vi/DfiF8Guf1bA/maxresdefault.jpg"></a>
     </div>
+    <script type="text/javascript" src="scripts.js"></script>
 </body>
 </html>

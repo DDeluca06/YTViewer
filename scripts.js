@@ -1,3 +1,4 @@
+// Allows for easy non-page-switching of content, don't alter this unless we're adding a new page
 const contentData = {
     entertainment: {
         title: "PlayStation's Insane Week in a Nutshell",
@@ -31,6 +32,7 @@ function handleDropdownChange() {
     updateContent(selectedValue);
 }
 
+// Update with the data that matches the category we're trying to access
 function updateContent(category) {
     const data = contentData[category];
     document.getElementById('title').innerHTML = `<a href="${data.videoUrl}">${data.title}</a>`;
@@ -39,6 +41,8 @@ function updateContent(category) {
     document.getElementById('navigationDropdown').value = category;
 }
 
+// Has to be manually added, read more button after a certain extent of text, then replaces it with
+// a read less button to collapse the description
 function readMore() {
     var dots = document.getElementById("dots");
     var moreText = document.getElementById("more");
@@ -71,3 +75,24 @@ document.addEventListener('DOMContentLoaded', function() {
         iframe.src = `${src}?autoplay=${autoplayParam}`; // Set the new URL with autoplay parameter
     });
 });
+
+    // Handle theme toggle
+    const themeSelector = document.getElementById('theme-selector');
+    const htmlElement = document.documentElement;
+    
+    themeSelector.addEventListener('change', function(evnt) {
+        const selectedTheme = document.getElementById('body');
+        /* Do NOT change this, it will not work, I promise you, whatever you changed that
+        blew up the code, revert it. Do not even think about tweaking this. */
+        const datavar = evnt.target.selectedOptions[0].value
+        console.log(evnt.target.selectedOptions[0].value);
+        htmlElement.setAttribute('data-theme', datavar);
+        localStorage.setItem('selectedTheme', datavar); // Save theme preference
+    });
+
+    // Load saved theme preference
+    const savedTheme = localStorage.getItem('selectedTheme');
+    if (savedTheme) {
+        htmlElement.setAttribute('data-theme', savedTheme);
+        themeSelector.value = savedTheme;
+    }

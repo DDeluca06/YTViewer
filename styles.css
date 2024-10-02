@@ -23,6 +23,30 @@
     --var-para: normal normal 300 1em/1.55em 'Outfit', sans-serif;
 }
 
+:root[data-theme="light"] {
+    --background-color: hsl(217, 63%, 43%);
+    --text-color: #ffffff;
+    --card-background: hsl(216, 36%, 50%);
+}
+
+:root[data-theme="dark"] {
+    --background-color: hsl(217, 75%, 11%);
+    --text-color: #ffffff;
+    --card-background: hsl(216, 61%, 22%);
+}
+
+:root[data-theme="sepia"] {
+    --background-color: #f1e7d0;
+    --text-color: #ffffff;
+    --card-background: #e8dcca;
+}
+
+:root[data-theme="blue-light"] {
+    --background-color: #f0f8ff;
+    --text-color: #000000;
+    --card-background: #e6f2ff;
+}
+
 *, *::before, *::after {
     box-sizing: border-box;
     margin: 0;
@@ -31,7 +55,7 @@
 }
 
 body {
-    background-color: var(--var-main-darkest);
+    background-color: var(--background-color);
 }
 
 a {
@@ -85,6 +109,7 @@ button, select {
     margin-bottom: 20px; /* Add some space between dropdown and autoplay button
  } */
 
+ /* This blows. Why is it set up this way? Why is it so finnicky? God, strike me down */
 .card-container {
     position:sticky;
     width: 410%;
@@ -100,63 +125,33 @@ button, select {
     left: 30px;
 }
 
-/*.container {
-    position: fixed;
-    left: 300px;
-    bottom: 340px; 
-    display: flex; 
-    align-items: center;
-    justify-content: center;
-    z-index: 1000; 
-    box-sizing: border-box; 
-}*/
-
+/* Make sure I didn't do something stupid that will break the container */
 .container > * {
-    /* Remove margin if not needed */
     margin: 0;
-    /* Ensure no unwanted transform is applied */
     transform: none;
 }
 
-
-/* .autoplayer{
-    position: fixed;
-    left: 51%;
-    bottom:30%;
-    cursor: pointer
-} */
-
-/* body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-} */
-
+/* Video remains contained within its respective row */
 .video-container {
-    /* position: fixed; */
-    /* left: 30px; */
-    /* max-width: 560px; */
-    /* margin-bottom: 20px; */
-    /* grid-template-columns: repeat(2 1fr); */
     grid-column: 2 / 2;
     grid-row: 1; 
 }
 
+/* Keeps video watchable */
 iframe {
-    /* position: fixed; */
     width: 83%;
     height: 73%;
     right: 12%;
     margin-top: 80px;
 }
 
+/* 'Centered' controls, which will never matc the actual elements, but it will
+remain somewhat consistent. */
 .controls {
     display: flex;
     justify-content: center;
     gap: 10px;
     margin-bottom: 20px;
-    left: 30px;
 }
 
 button, #navigationDropdown {
