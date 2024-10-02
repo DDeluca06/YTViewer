@@ -90,9 +90,27 @@ document.addEventListener('DOMContentLoaded', function() {
         localStorage.setItem('selectedTheme', datavar); // Save theme preference
     });
 
-    // Load saved theme preference
-    const savedTheme = localStorage.getItem('selectedTheme');
-    if (savedTheme) {
-        htmlElement.setAttribute('data-theme', savedTheme);
-        themeSelector.value = savedTheme;
+    // We need a default theme, so we'll change it based on what the user's system preference is
+    function themeSysPref() {
+        const darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+        const theme = darkModeMediaQuery.matches ? 'dark' : 'light'; // I had help for this one, actually. That ? is an "if", I guess?
+        htmlElement.setAttribute('data-theme', theme);
+        themeSelector.value = theme;
+        localStorage.setItem('selectedTheme', theme);
     }
+
+        // Load saved theme preference or set based on system preference
+        const savedTheme = localStorage.getItem('selectedTheme');
+        if (savedTheme) {
+            htmlElement.setAttribute('data-theme', savedTheme);
+            themeSelector.value = savedTheme;
+        } else {
+            setThemeBasedOnSystemPreference();
+        }
+    
+        // Listen for changes in system color scheme
+        const darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+        darkModeMediaQuery.addListener((e) => {
+            if (!localStorage.getItem('selectedTheme')) {
+                setThemeBasedOnSystemPreference();
+            }});

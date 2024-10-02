@@ -165,3 +165,20 @@ button, #navigationDropdown {
 }
 
 #more {display: none;}
+
+/* System Preference work */
+@media (prefers-color-scheme: dark) {
+    :root[data-theme="system"] {
+        --background-color: hsl(217, 75%, 11%);
+        --text-color: #ffffff;
+        --card-background: hsl(216, 61%, 22%);
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    :root[data-theme="system"] {
+        --background-color: hsl(217, 63%, 43%);
+        --text-color: #ffffff;
+        --card-background: hsl(216, 36%, 50%);
+    }
+}
