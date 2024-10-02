@@ -32,7 +32,7 @@
             <option value="education">Education</option>
         </select>
         <button id="toggle-autoplay">Toggle Autoplay</button>
-        <select id="theme-selector">
+        <select id="theme-selector" onclick="">
             <option value="dark">Dark Mode</option>
             <option value="light">Light Mode</option>
             <option value="sepia">Sepia Mode</option>
@@ -46,6 +46,28 @@
         <a href="https://www.youtube.com/watch?v=UGj8rcxYrpU" target="_blank"><img src="https://i3.ytimg.com/vi/UGj8rcxYrpU/maxresdefault.jpg"></a>
         <a href="https://www.youtube.com/watch?v=WXFW1LL_Q7k" target="_blank"><img src="https://i3.ytimg.com/vi/WXFW1LL_Q7k/maxresdefault.jpg"></a>
         <a href="https://www.youtube.com/watch?v=DfiF8Guf1bA" target="_blank"><img src="https://i3.ytimg.com/vi/DfiF8Guf1bA/maxresdefault.jpg"></a>
+    </div>
+    <!-- Form for preference setting, we're not going to bother the user every time. -->
+    <button id="openFormButton">Set Preferences</button>
+    <div id="preferenceForm">
+        <h2>Set Your Preferences</h2>
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+            <label for="theme">Select Theme:</label>
+            <select id="theme">
+                <option value="light">Light</option>
+                <option value="dark">Dark</option>
+                <option value="blue">Blue</option>
+            </select>
+        </div>
+        <button id="savePreference">Save Preferences</button>
     </div>
     <script type="text/javascript" src="scripts.js"></script>
 </body>

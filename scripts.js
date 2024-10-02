@@ -114,3 +114,41 @@ document.addEventListener('DOMContentLoaded', function() {
             if (!localStorage.getItem('selectedTheme')) {
                 setThemeBasedOnSystemPreference();
             }});
+
+        // Get the elements by their IDs
+        const openFormButton = document.getElementById('openFormButton');
+        const preferenceForm = document.getElementById('preferenceForm');
+        const savePreferenceButton = document.getElementById('savePreference');
+        
+        // Show the form when the button is clicked
+        openFormButton.onclick = function() {
+            if (preferenceForm.style.display === 'none' || preferenceForm.style.display === '') {
+                preferenceForm.style.display = 'block';
+            } else {
+                preferenceForm.style.display = 'none';
+            }
+        }
+
+        // Handle form submission and save to local storage
+        savePreferenceButton.onclick = function() {
+            // Get the user's name, email, and selected theme
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const selectedTheme = document.getElementById('theme').value;
+
+            // Check that inputs are not empty
+            if (name && email) {
+                // Store the selected theme in local storage
+                localStorage.setItem('userPreferences', JSON.stringify({
+                    name: name,
+                    email: email,
+                    theme: selectedTheme
+                }));
+
+                // Optionally, hide the form and show a success message
+                preferenceForm.style.display = 'none';
+                alert('Preferences saved successfully!');
+            } else {
+                alert('Please fill out all fields.');
+            }
+        }

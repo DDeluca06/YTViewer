@@ -86,6 +86,27 @@ p {
     font-size: 16px;
 }
 
+/* Hide the form */
+#preferenceForm {
+    display: none; 
+    border: 1px solid #ccc;
+    padding: 20px;
+    width: 300px;
+    margin-top: 20px;
+}
+.form-group {
+    margin-bottom: 10px;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+.form-group input {
+    width: 100%;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
 button, select {
     background-color: var(--var-line-dark); /* Green */
     border: none;
