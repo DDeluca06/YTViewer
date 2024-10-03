@@ -110,7 +110,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
         // Listen for changes in system color scheme
         const darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
-        darkModeMediaQuery.addListener((e) => {
+        darkModeMediaQuery.addListener((e) => { // addListener is decepricated, we should use something else
             if (!localStorage.getItem('selectedTheme')) {
                 setThemeBasedOnSystemPreference();
             }});
@@ -134,18 +134,30 @@ document.addEventListener('DOMContentLoaded', function() {
             // Get the user's name, email, and selected theme
             const name = document.getElementById('name').value;
             const email = document.getElementById('email').value;
-            const selectedTheme = document.getElementById('theme').value;
 
+            // This is Validation code, for later.
+            // // Define our Regex
+            // const regex = /^[a-zA-Z0–9._-]+@[a-zA-Z0–9.-]+\.[a-zA-Z]{2,4}$/;
+              
             // Check that inputs are not empty
             if (name && email) {
                 // Store the selected theme in local storage
                 localStorage.setItem('userPreferences', JSON.stringify({
                     name: name,
                     email: email,
-                    theme: selectedTheme
                 }));
+                
+                // Store these in variables, print them to the console to display what we got
+                let result = JSON.parse(localStorage.getItem('userPreferences'))
+                let usrname = result.name
+                let usrmail = result.email
+                let usrtheme = localStorage.getItem('selectedTheme') // QUOTES MATTER! WOW, this took FOREVER.
+                // Print!
+                console.log("Username: " + usrname)
+                console.log("Email: " + usrmail)
+                console.log("Theme: " + usrtheme)
 
-                // Optionally, hide the form and show a success message
+                // Hide the form and show a success message, or tell the user to stop being stupid
                 preferenceForm.style.display = 'none';
                 alert('Preferences saved successfully!');
             } else {

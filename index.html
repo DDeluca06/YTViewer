@@ -55,18 +55,13 @@
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required>
         </div>
-        <div class="form-group">
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-        </div>
-        <div class="form-group">
-            <label for="theme">Select Theme:</label>
-            <select id="theme">
-                <option value="light">Light</option>
-                <option value="dark">Dark</option>
-                <option value="blue">Blue</option>
-            </select>
-        </div>
+        <form id="emailForm">
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <div id="emailError" class="error"></div>
+            </div>
+        </form>
         <button id="savePreference">Save Preferences</button>
     </div>
     <script type="text/javascript" src="scripts.js"></script>
