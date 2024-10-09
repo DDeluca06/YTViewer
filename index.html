@@ -9,16 +9,17 @@
     <link rel="stylesheet" href="./styles.css">
 </head>
 <body data-theme="dark" id="body">
+    <a href="login.html">
+        <button id="loginButton" class="login">Login</button>
+    </a>
     <section class="layout">
         <main class="main-content card-container">
-        <!-- <section class="card-container"> -->
                 <h1 id="title"></h1>
                 <hr style="margin: 8px;"/>
                 <h3 style="text-align: center;">Description</h3>
                 <p id="description"></p>
                 <button onclick="readMore()" id="readmore" style="cursor: pointer;">Read more</button>
             </main>
-        <!-- </section> -->
         <section class="video-container">
             <iframe id="youtube-video" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </section>

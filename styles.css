@@ -7,7 +7,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
 
 :root {
-    
     font-size: 15px;
     /* Primary Colors */
     --var-soft-blue: hsl(215, 51%, 70%);
@@ -116,6 +115,25 @@ button, select {
     font: var(--var-para);
     display: inline-block;
     font-size: 16px;
+}
+
+.login{
+    position: absolute;
+    right: 7%;
+    top: 3%;
+    color: var(--text-color);
+    color: white;
+    padding: 6px 32px;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: var(--background-color) 0.3s;
+}
+
+.logtitle{
+    text-align: center;
+    font-size: 3.4vw;
 }
 
 /* #navigationDropdown {
