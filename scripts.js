@@ -164,3 +164,37 @@ document.addEventListener('DOMContentLoaded', function() {
                 alert('Please fill out all fields.');
             }
         }
+
+        // Validation Logic
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            let username = document.getElementById('username').value;
+            let password = document.getElementById('password').value;
+            let usernameError = document.getElementById('usernameError');
+            let passwordError = document.getElementById('passwordError');
+            
+            // Reset error messages
+            usernameError.textContent = '';
+            passwordError.textContent = '';
+            
+            // Username validation
+            if (username.trim() === '') {
+                usernameError.textContent = 'Username is required';
+            } else if (username.length < 3) {
+                usernameError.textContent = 'Username must be at least 3 characters long';
+            }
+            
+            // Password validation
+            if (password === '') {
+                passwordError.textContent = 'Password is required';
+            } else if (password.length < 6) {
+                passwordError.textContent = 'Password must be at least 6 characters long';
+            }
+            
+            // If there are no errors, you can proceed with form submission
+            if (usernameError.textContent === '' && passwordError.textContent === '') {
+                console.log('Form is valid, proceed with submission');
+                // Here you would typically send the form data to your server
+            }
+        });

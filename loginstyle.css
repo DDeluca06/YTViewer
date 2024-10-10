@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+:root[data-theme="light"] {
+    --background-color: hsl(217, 63%, 43%);
+    --text-color: #ffffff;
+    --card-background: hsl(216, 36%, 50%);
+}
+
+:root[data-theme="dark"] {
+    --background-color: hsl(217, 75%, 11%);
+    --text-color: #ffffff;
+    --card-background: hsl(216, 61%, 22%);
+}
+
+:root[data-theme="sepia"] {
+    --background-color: #c9b78d;
+    --text-color: #000000;
+    --card-background: #9b7e53;
+}
+
+:root[data-theme="blue-light"] {
+    --background-color: #8560db;
+    --text-color: #ffffff;
+    --card-background: #7b44a0;
+}
+
+body {
+    background-color: var(--background-color);
+}
+
+.logtitle{
+    font-size: 40px;
+}
+
+button, select {
+    background-color: var(--var-line-dark); /* Green */
+    border: none;
+    color: rgb(18, 188, 215);
+    padding: 8px 15px;
+    text-align: center;
+    font: var(--var-para);
+    display: inline-block;
+    font-size: 16px;
+}
+
+.layout {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: var(--text-color);
+}
+.container {
+    background-color: var(--card-background);
+    padding: 2rem;
+    border-radius: 15px;
+    width: 100%;
+    max-width: 400px;
+}
+.form-group {
+    margin-bottom: 1.3rem;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 0.8rem;
+    font-size: 17px;
+}
+.form-group input {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid var(--var-line-dark);
+    border-radius: 4px;
+    font-size: 1rem;
+}
+.error {
+    color: #ff0000;
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+}
+button[type="submit"] {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: var(--var-cyan);
+    color: var(--var-main-darkest);
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+button[type="submit"]:hover {
+    background-color: hsl(207, 74%, 54%);
+}
+@media (max-width: 480px) {
+    .container {
+        padding: 1rem;
+    }
+    .logtitle {
+        font-size: 2rem;
+    }
+}
