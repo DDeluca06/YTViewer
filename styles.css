@@ -22,30 +22,6 @@
     --var-para: normal normal 300 1em/1.55em 'Outfit', sans-serif;
 }
 
-:root[data-theme="light"] {
-    --background-color: hsl(217, 63%, 43%);
-    --text-color: #ffffff;
-    --card-background: hsl(216, 36%, 50%);
-}
-
-:root[data-theme="dark"] {
-    --background-color: hsl(217, 75%, 11%);
-    --text-color: #ffffff;
-    --card-background: hsl(216, 61%, 22%);
-}
-
-:root[data-theme="sepia"] {
-    --background-color: #c9b78d;
-    --text-color: #000000;
-    --card-background: #9b7e53;
-}
-
-:root[data-theme="blue-light"] {
-    --background-color: #8560db;
-    --text-color: #ffffff;
-    --card-background: #7b44a0;
-}
-
 *, *::before, *::after {
     box-sizing: border-box;
     margin: 0;

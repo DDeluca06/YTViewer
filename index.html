@@ -7,6 +7,7 @@
     <title>Focus View</title>
     <link rel="icon" type="image/x-icon" href="/Resources/favicon.ico">
     <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="themes.css">
 </head>
 <body data-theme="dark" id="body">
     <a href="login.html">
@@ -34,10 +35,13 @@
         </select>
         <button id="toggle-autoplay">Toggle Autoplay</button>
         <select id="theme-selector" onclick="">
-            <option value="dark">Dark Mode</option>
-            <option value="light">Light Mode</option>
-            <option value="sepia">Sepia Mode</option>
-            <option value="blue-light">Blue Light Filter</option>
+            <option value="light">Light</option>
+            <option value="dark">Dark</option>
+            <option value="sepia">Sepia</option>
+            <option value="spring">Spring</option>
+            <option value="maroon">Maroon</option>
+            <option value="hadaka">Hadaka</option>
+            <option value="cgrey">Cool Grey</option>
         </select>
     </div>
     <h1>What's Happening Now</h1>
@@ -51,10 +55,10 @@
     <!-- Form for preference setting, we're not going to bother the user every time. -->
     <button id="openFormButton">Set Preferences</button>
     <div id="preferenceForm">
-        <h2>Set Your Preferences</h2>
+        <h2>Set Your Preferences</h2><Br>
         <div class="form-group">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
+            <label for="disname">Display Name:</label>
+            <input type="text" id="disname" displayname="name" required>
         </div>
         <form id="emailForm">
             <div class="form-group">

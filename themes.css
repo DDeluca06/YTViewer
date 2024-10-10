@@ -1,0 +1,41 @@
+:root[data-theme="light"] {
+    --background-color: hsl(217, 63%, 43%);
+    --text-color: #ffffff;
+    --card-background: hsl(216, 36%, 50%);
+}
+
+:root[data-theme="dark"] {
+    --background-color: hsl(217, 75%, 11%);
+    --text-color: #ffffff;
+    --card-background: hsl(216, 61%, 22%);
+}
+
+:root[data-theme="sepia"] {
+    --background-color: #c9b78d;
+    --text-color: #000000;
+    --card-background: #9b7e53;
+}
+
+:root[data-theme="spring"] {
+    --background-color: #96db8a;
+    --text-color: #ffffff;
+    --card-background: #629460;
+}
+
+:root[data-theme="maroon"] {
+    --background-color: #7A0010;
+    --text-color: #ffffff;
+    --card-background: #A30016;
+}
+
+:root[data-theme="hadaka"] {
+    --background-color: #CE4257;
+    --text-color: #ffffff;
+    --card-background: #822130;
+}
+
+:root[data-theme="cgrey"] {
+    --background-color: #9A91B6;
+    --text-color: #ffffff;
+    --card-background: #665A87;
+}
